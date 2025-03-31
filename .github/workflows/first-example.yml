@@ -12,5 +12,9 @@ jobs:
           run: uname -a
         - name: List files
           run: ls -lrt
-        - name: Read File
-          run: cat README.md
+        - name: checkout
+          uses: actions/checkout@v4
+        - name: checkout README.md file
+          run: cat README.md  
+          
+    
