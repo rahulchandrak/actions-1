@@ -22,4 +22,8 @@ jobs:
             pwd
             uname -a
             ls -alrt
+        - name: generate ASCII text
+          run: |
+           apt install cowsay -y
+           cowsay -f dragon "run for cover" >> dargon.txt
     
