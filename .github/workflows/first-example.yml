@@ -16,5 +16,10 @@ jobs:
           uses: actions/checkout@v4
         - name: checkout README.md file
           run: cat README.md  
-          
+        - name: multi-exec
+          run: |
+            whoami
+            pwd
+            uname-a
+            ls -alrt
     
