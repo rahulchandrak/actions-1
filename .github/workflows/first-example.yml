@@ -24,6 +24,6 @@ jobs:
             ls -alrt
         - name: generate ASCII text
           run: |
-           apt install cowsay -y
+           sudo apt install cowsay -y
            cowsay -f dragon "run for cover" >> dargon.txt
     
