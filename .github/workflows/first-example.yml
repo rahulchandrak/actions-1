@@ -31,4 +31,8 @@ jobs:
             ls -lrta
             grep -i run *
             cat dragon.txt
-    
+        - name: upload the file
+          uses: actions/upload-artifact@v4
+          with:
+            name: first upload file
+            path: dragon.txt
