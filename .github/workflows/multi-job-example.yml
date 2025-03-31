@@ -1,0 +1,36 @@
+name: multi-exec jobs example
+on: push
+jobs:
+    build_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: install cowsay
+          run: |
+            sudo apt-get update -y
+            sudo apt-get install cowsay -y
+            cowsay -f dragon "run for cover" >> dragon.txt
+        - name: upload the dragon file
+          uses: actions/upload-artifact@v4
+          with:
+            name: upload-dragon-file
+            path: dragon.txt
+    test_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: test the existence of the file
+          uses: actions/checkout@v4
+        - name: test the existence of the file
+          run: | 
+            ls -lrta
+            grep -i run *
+    deploy_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout the repo
+          uses: actions/checkout@v4
+        - name: checkout the contents of the dragon.txt file
+          run: |
+            ls -lrta
+            cat dragon.txt
+    
+
