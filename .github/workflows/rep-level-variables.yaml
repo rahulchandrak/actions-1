@@ -10,4 +10,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: repo-level-secret
-          run: echo "value of repo level secret is $REPO_SECRET_NAME"
+          run: echo "value of repo level secret is ${{ secrets.REPO_SECRET_NAME }}"
