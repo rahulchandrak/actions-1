@@ -1,0 +1,13 @@
+name: repo-level-secrets
+on: push
+jobs:
+    access-repo-level-variables:
+        runs-on: ubuntu-latest
+        steps:
+        - name: repo-level-variable
+          run: echo "value of repo level variable is $REPO_VAR_NAME"
+    access-repo-level-secret:
+        runs-on: ubuntu-latest
+        steps:
+        - name: repo-level-secret
+          run: echo "value of repo level secret is $REPO_SECRET_NAME"
