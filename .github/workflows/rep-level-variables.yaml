@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: repo-level-variable
-          run: echo "value of repo level variable is $REPO_VAR_NAME"
+          run: echo "value of repo level variable is ${{ env.REPO_VAR_NAME }}"
     access-repo-level-secret:
         runs-on: ubuntu-latest
         steps:
