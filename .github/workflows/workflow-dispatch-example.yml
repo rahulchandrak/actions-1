@@ -18,8 +18,14 @@ on:
         type: string
 
 jobs:
+    
     print-tag:
+        environment: production
         runs-on: ubuntu-latest
         steps:
         - name: Print the purpose of run
-          run: echo  ${{ inputs.tags }} purpose
+          run: |
+
+             echo  ${{ inputs.tags }} purpose
+             echo "name is ${{ vars.NAME }}"
+             echo "surname is ${{ secrets. SURNAME}}"
