@@ -27,5 +27,5 @@ jobs:
           run: |
 
              echo  ${{ inputs.tags }} purpose
-             echo "name is ${{ vars.NAME }}"
+             echo "the name is ${{ vars.NAME }}"
              echo "surname is ${{ secrets. SURNAME}}"
